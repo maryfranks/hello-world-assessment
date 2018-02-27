@@ -1,24 +1,34 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+Ruby version 2.5.0
+Rails version 5.1.5
 
-Things you may want to cover:
+### Prerequisites
+#### Postgres
+Install Postgres at https://www.postgresql.org/
 
-* Ruby version
+### Installing
+Clone repository and cd into folder.  Run the following commands to install dependencies:
 
-* System dependencies
+```
+bundle install
+```
 
-* Configuration
+#### Database setup
+Make sure Postgres is running!
 
-* Database creation
+1. Create databases
+```
+rails db: create
+```
+2. Run migrations
+```
+rails db: migrate
+```
 
-* Database initialization
+## Testing
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Testing suite is run with
+```
+rake
+```
