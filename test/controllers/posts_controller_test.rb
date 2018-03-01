@@ -1,7 +1,13 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "index" do
+    skip
+  end
+
+  test "root" do
+    skip
+  end
+
 end
