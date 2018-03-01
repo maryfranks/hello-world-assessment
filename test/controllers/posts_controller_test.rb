@@ -9,7 +9,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "root" do
-    skip
+    # skip
     get root_url
     assert_response :success
   end
