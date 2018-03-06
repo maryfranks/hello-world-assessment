@@ -13,22 +13,13 @@ feature "Post" do
   end
 
   test "submit new post via form" do
-    skip
+    # skip
     visit "posts"
-    fill_in "post[text]", :with => "Hello World"
+    fill_in "post[text]", :with => "New Post"
     click_on "Submit"
-    # page should reload when form is submitted
-    assert_equal "/pages", current_path
-    assert_selector "p", text: "Hello World"
-    assert_equal "Post Created", flash[:notice]
-  end
-
-  test "displays flash when post with no text does not save" do
-    skip
-    visit "posts"
-    click_on "Submit"
-    assert_equal "/pages", current_path
-    assert_equal "Oops, try again - Posts must have text!", flash[:error]
+    # page reloads when form is submitted
+    assert_equal "/posts", current_path
+    assert page.has_text? "New Post"
   end
 
 end
