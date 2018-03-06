@@ -8,14 +8,14 @@ describe Post do
   end
 
   test "can create post" do
-    skip
+    # skip
     post = Post.new
     post.text = "hello"
     assert post.save
   end
 
   test "post needs text" do
-    skip
+    # skip
     post = Post.new
     post.save
     refute post.save
