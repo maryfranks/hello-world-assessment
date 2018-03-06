@@ -14,4 +14,16 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "can create post" do
+    assert_difference('Post.count') do
+      post posts_url, params: { post: { text: "Good times" } }
+    end
+    assert_equal "Post Created", flash[:notice]
+  end
+
+  test "post does not save without text" do
+    post posts_url, params: { post: { text: nil } }
+    assert_equal "Oops, try again - Posts must have text!", flash[:error]
+  end
+
 end
