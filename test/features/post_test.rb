@@ -16,7 +16,7 @@ feature "Post" do
     # skip
     visit "posts"
     fill_in "post[text]", :with => "New Post"
-    click_on "Submit"
+    click_on "Done"
     # page reloads when form is submitted
     assert_equal "/posts", current_path
     assert page.has_text? "New Post"
