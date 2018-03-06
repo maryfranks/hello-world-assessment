@@ -7,15 +7,15 @@ feature "Post" do
   #   page.wont_have_content "Goodbye All!"
   # end
   test "post submission form exists" do
-    skip
+    # skip
     visit "posts"
-    assert page.has_field? "text", type: "text"
+    assert page.has_field? "post[text]"
   end
 
   test "submit new post via form" do
     skip
     visit "posts"
-    fill_in "text", :with => "Hello World"
+    fill_in "post[text]", :with => "Hello World"
     click_on "Submit"
     # page should reload when form is submitted
     assert_equal "/pages", current_path
