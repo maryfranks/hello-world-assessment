@@ -8,11 +8,12 @@ Rails version 5.1.5
 Install Postgres at https://www.postgresql.org/
 
 ### Installing
-Clone repository and cd into folder.  Run the following commands to install dependencies:
+Clone repository and cd into folder.  
 
-```
-bundle install
-```
+This project uses Poltergeist (https://github.com/teampoltergeist/poltergeist), which requires PhantomJS.  Run ```brew install phantomjs```
+or visit link for installation instructions.
+
+Run ```bundle install``` to install dependencies:
 
 #### Database setup
 Make sure Postgres is running!
@@ -24,6 +25,12 @@ rails db: create
 2. Run migrations
 ```
 rails db: migrate
+```
+
+#### Start server
+Server runs on localhost:3000 with
+```
+rails server
 ```
 
 ## Testing
