@@ -4,11 +4,11 @@ describe Post do
   # let(:post) { Post.new }
 
   test "can create post" do
-    skip
+    # skip
     user = User.create(username: "pooh", password: "1234", password_confirmation: "1234")
     post = Post.new
     post.text = "hello"
-    post.user_id = user
+    post.user_id = user.id
     assert post.save
   end
 
@@ -20,7 +20,7 @@ describe Post do
   end
 
   test "post needs user" do
-    skip
+    # skip
     post = Post.new(text: "goodbye")
     refute post.save
   end

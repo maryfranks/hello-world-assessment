@@ -13,7 +13,7 @@ feature "Post" do
   end
 
   test "submit new post via form" do
-    # skip
+    skip
     visit "posts"
     fill_in "post[text]", :with => "New Post"
     click_on "Done"
