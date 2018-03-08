@@ -2,6 +2,13 @@ require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
 
+  include SignInHelper
+
+  setup do
+    @user = users(:joe)
+    sign_in_as users(:joe)
+  end
+
   test "index" do
     # skip
     get posts_url
