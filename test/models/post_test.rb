@@ -1,7 +1,6 @@
 require "test_helper"
 
 describe Post do
-  # let(:post) { Post.new }
 
   test "can create post" do
     # skip
