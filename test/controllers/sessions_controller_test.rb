@@ -1,7 +1,13 @@
 require "test_helper"
 
 describe SessionsController do
-  # it "must be a real test" do
-  #   flunk "Need real tests"
-  # end
+
+  test "user can sign out" do
+    skip
+    delete session_url(:martine)
+    assert_redirected_to root_url
+    follow_redirect!
+    assert_select "a", "Login"
+  end
+
 end

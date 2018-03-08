@@ -5,6 +5,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   include SignInHelper
 
   setup do
+    skip
     @user = users(:joe)
     sign_in_as users(:joe)
   end
