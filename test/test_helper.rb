@@ -13,7 +13,7 @@ class ActiveSupport::TestCase
 
   module SignInHelper
     def sign_in_as(user)
-      post sessions_url(email: user.username, password: '1234')
+      post sessions_url(username: user.username, password: '1234')
     end
   end
 
