@@ -23,16 +23,16 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "can create post" do
-    skip
+    # skip
     assert_difference('Post.count') do
-      post posts_url, params: { post: { text: "Good times" } }
+      post posts_url, params: { post: { text: "Good times", user_id: @user.id } }
     end
     assert_equal "Post Created", flash[:notice]
   end
 
   test "post does not save without text" do
-    skip
-    post posts_url, params: { post: { text: nil } }
+    # skip
+    post posts_url, params: { post: { text: nil, user_id: @user.id } }
     assert_equal "Oops, try again - Posts must have text!", flash[:error]
   end
 
