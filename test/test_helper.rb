@@ -10,4 +10,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  module SignInHelper
+    def sign_in_as(user)
+      post sessions_url(username: user.username, password: '1234')
+    end
+  end
+
 end
