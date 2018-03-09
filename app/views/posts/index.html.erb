@@ -25,7 +25,7 @@
       <div id="all-posts">
         <% @posts.each do |post| %>
           <div>
-            <p> <%= post.text %> </p>
+            <p> <%= post.text %> (-<%= post.user.username %>) </p>
           </div>
         <% end %>
       </div>
