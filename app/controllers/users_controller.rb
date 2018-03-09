@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash.now[:notice] = 'Account successfully created!'
-      redirect_to user_path
+      redirect_to new_session_path
     else
       flash.now[:error] = 'Sorry, try again!'
       render :new

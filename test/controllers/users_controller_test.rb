@@ -25,7 +25,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       assert_difference('User.count') do
         post user_url, params: { user: { username: "person", password: "1234", password_confirmation: "1234" } }
       end
-      assert_redirected_to user_path
+      assert_redirected_to new_session_path
       assert_equal 'Account successfully created!', flash[:notice]
 
     end
