@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'minitest-rails-capybara'
   gem 'poltergeist'
+  gem 'launchy'
   # gem 'selenium-webdriver'
 end
 
