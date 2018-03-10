@@ -4,10 +4,18 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one:
+hello:
   text: "hello world"
   user: :joe
 
-two:
+goodbye:
   text: "goodbye world"
   user: :joe
+
+dogs:
+  text: "I like dogs"
+  user: :sue
+
+cats:
+  text: "Cats are okay"
+  user: :sue
