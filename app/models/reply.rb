@@ -1,6 +1,8 @@
 class Reply < ApplicationRecord
 
   belongs_to :user
-  belongs_to :post 
+  belongs_to :post
+
+  validates :reply, presence: true 
 
 end
