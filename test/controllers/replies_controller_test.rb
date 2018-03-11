@@ -14,7 +14,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "can reply to own post" do
-      skip
+      # skip
       assert_difference('Reply.count') do
         post post_replies_url(@joes_post.id), params: { reply: { reply: "I like your post" } }
       end
@@ -22,7 +22,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "can reply to other post" do
-      skip
+      # skip
       assert_difference('Reply.count') do
         post post_replies_url(@sues_post.id), params: { reply: { reply: "I like your post" } }
       end
@@ -30,11 +30,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "post save fail" do
-      skip
+      # skip
       assert_no_difference('Reply.count') do
         post post_replies_url(@joes_post.id), params: { reply: { reply: nil } }
       end
-      assert_equal "reply must have text", flash[:error]
+      assert_equal "problem with your reply", flash[:error]
     end
 
   end

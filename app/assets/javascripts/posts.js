@@ -6,22 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
   var allPosts = document.querySelector('#all-posts');
   var post = document.querySelector('#post_text')
 
-  postDoneButton.addEventListener('submit', function(event) {
-    event.preventDefault();
-    console.log("Submitting post");
-    $.ajax({
-      url: '/posts',
-      method: 'post',
-      data: $(post).serialize(),
-      // dataType: 'json',
-    }).done(function(data) {
-      console.log("done");
-      var newPost = document.createElement('p');
-      newPost.innerText = data;
-      allPosts.append(newPost);
-      postDoneButton.reset();
-      // message_button.disabled = false;
-      console.log("all finished");
-    });
-  });
-});
+//   postDoneButton.addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     console.log("Submitting post");
+//     $.ajax({
+//       url: '/posts',
+//       method: 'post',
+//       data: $(post).serialize(),
+//       // dataType: 'json',
+//     }).done(function(data) {
+//       console.log("done");
+//       var newPost = document.createElement('p');
+//       newPost.innerText = data;
+//       allPosts.append(newPost);
+//       postDoneButton.reset();
+//       // message_button.disabled = false;
+//       console.log("all finished");
+//     });
+//   });
+// });

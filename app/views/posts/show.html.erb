@@ -1,0 +1,3 @@
+<p><%= @post.text %> (-<%= @post.user.username %>)</p>
+
+<%= render 'replies/new', post: @post, reply: @reply %>

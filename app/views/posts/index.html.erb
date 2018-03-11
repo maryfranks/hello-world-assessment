@@ -21,15 +21,27 @@
       <div>
         <input type="submit" value="Done">
       </div>
-
+    <% end %>
       <div id="all-posts">
         <% @posts.each do |post| %>
           <div>
             <p> <%= post.text %> (-<%= post.user.username %>) </p>
           </div>
-        <% end %>
+          <div class="replies">
+            <% post.replies.each do | reply | %>
+              <p><%= reply.reply %> (-<%= reply.user.username %>)</p>
+            <% end %>
+            <%= form_tag post_replies_path(post.id) do %>
+              <div>
+                <%= label_tag :reply %><br/>
+                <%= text_field_tag :reply, params[:reply] %>
+              </div>
+              <div><%= submit_tag "Reply" %></div>
+            <% end %>
+          </div>
+          <% end %>
       </div>
-    <% end %>
+
 
   <% else %>
 

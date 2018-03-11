@@ -1,0 +1,16 @@
+<%= form_tag post_replies_path(@post.id) do %>
+  <% if reply.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reply.errors.count, "error") %> prohibited this reply from being saved:</h2>
+      <ul>
+      <% reply.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  <% end %>
+  <div>
+    <%= label_tag :reply %><br/>
+    <%= text_field_tag :reply, params[:reply][:reply] %>
+  </div>
+  <div><%= submit_tag "Reply" %></div>
+<% end %>
