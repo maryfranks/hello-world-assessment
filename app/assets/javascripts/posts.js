@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
       newPost.innerText = data;
       allPosts.append(newPost);
       postDoneButton.reset();
-      message_button.disabled = false;
+      postDoneButton.disabled = false;
       console.log("all finished");
     });
   });
