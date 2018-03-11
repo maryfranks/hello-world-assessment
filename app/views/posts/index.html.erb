@@ -1,6 +1,7 @@
 <h1>Hello World!</h1>
 
 <% if current_user %>
+<h3>How are you today <%= current_user.username %>?</h3>
   <%= render 'new_post_form', post: @post %>
 
   <div id="all-posts">
@@ -9,7 +10,6 @@
         <p> <%= post.text %> (-<%= post.user.username %>) </p>
       </div>
       <%= render 'replies/display_replies', post: post %>
-
       <% end %>
   </div>
 
