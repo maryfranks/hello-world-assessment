@@ -1,6 +1,7 @@
 <h1>Welcome</h1>
 <%= render 'posts/new_post_form', post: @post %>
 <% @posts.each do | post | %>
+<%= link_to 'View Post', post_path(post.id) %>
   <p><%= post.text %></p>
   <%= render 'replies/new_reply_form', post: post %>
   <%= render 'replies/display_replies', post: post %>

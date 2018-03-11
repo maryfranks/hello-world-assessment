@@ -7,7 +7,8 @@
   <div id="all-posts">
     <% @posts.each do |post| %>
       <div class="post-and-replies">
-        <p> <%= post.text %> (-<%= post.user.username %>) </p>
+        <%= link_to 'View Post', post_path(post.id) %>
+        <p> <%= post.text %> (-<%= post.user.username %>)</p>
         <% if post.replies.count == 0 %>
           <%= render 'replies/new_reply_form', post: post %>
         <% end %>
