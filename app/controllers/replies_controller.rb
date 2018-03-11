@@ -3,8 +3,8 @@ class RepliesController < ApplicationController
   def create
     @reply = Reply.new
     @post = Post.find(params[:post_id])
-    @reply.user_id = current_user.id 
-    @reply.reply = params[:reply][:reply]
+    @reply.user_id = current_user.id
+    @reply.reply = params[:reply]
     @reply.post_id = @post.id
 
     if @reply.save
