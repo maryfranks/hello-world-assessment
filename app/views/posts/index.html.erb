@@ -1,50 +1,19 @@
 <h1>Hello World!</h1>
 
 <% if current_user %>
+  <%= render 'new_post_form', post: @post %>
 
-  <%= form_for @post, url: {controller: "posts", action: "create"}, :html=> {id: 'submit-post'} do |f| %>
-    <% if @post.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-        <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
+  <div id="all-posts">
+    <% @posts.each do |post| %>
       <div>
-        <label>What do you have to say?</label><br />
-        <%= f.text_area :text %>
+        <p> <%= post.text %> (-<%= post.user.username %>) </p>
       </div>
-      <div>
-        <input type="submit" value="Done">
-      </div>
-    <% end %>
-      <div id="all-posts">
-        <% @posts.each do |post| %>
-          <div>
-            <p> <%= post.text %> (-<%= post.user.username %>) </p>
-          </div>
-          <div class="replies">
-            <% post.replies.each do | reply | %>
-              <p><%= reply.reply %> (-<%= reply.user.username %>)</p>
-            <% end %>
-            <%= form_tag post_replies_path(post.id) do %>
-              <div>
-                <%= label_tag :reply %><br/>
-                <%= text_field_tag :reply, params[:reply] %>
-              </div>
-              <div><%= submit_tag "Reply" %></div>
-            <% end %>
-          </div>
-          <% end %>
-      </div>
+      <%= render 'replies/display_replies', post: post %>
 
+      <% end %>
+  </div>
 
-  <% else %>
-
+<% else %>
     <div>
       <h2 id="log-in"><%= link_to 'Log in', new_session_path %></h2>
       <h2 id="sign-up">Or <%= link_to 'Sign Up', new_user_path %></h2>
