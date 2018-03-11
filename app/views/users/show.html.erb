@@ -1,5 +1,7 @@
 <h1>Welcome</h1>
-
+<%= render 'posts/new_post_form', post: @post %>
 <% @posts.each do | post | %>
   <p><%= post.text %></p>
+  <%= render 'replies/new_reply_form', post: post %>
+  <%= render 'replies/display_replies', post: post %>
 <% end %>
