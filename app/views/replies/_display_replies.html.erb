@@ -1,6 +1,8 @@
 <div class="replies">
   <% post.replies.each do | reply | %>
-    <p><%= reply.reply %> (-<%= reply.user.username %>)</p>
+    <div class="all-replies">
+      <p><%= reply.reply %> (-<%= reply.user.username %>)</p>
+    </div>
 
     <%= form_tag post_replies_path(post.id) do %>
       <% if reply.errors.any? %>
