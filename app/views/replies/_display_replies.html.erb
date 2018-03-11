@@ -12,11 +12,8 @@
           <% end %>
           </ul>
       <% end %>
-      <div>
-        <%= label_tag :reply %><br/>
-        <%= text_field_tag :reply, params[:reply] %>
-      </div>
-      <div><%= submit_tag "Reply" %></div>
+      <%= render 'replies/new_reply_form', post: post %>
+
     <% end %>
 
   <% end %>
