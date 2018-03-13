@@ -32,7 +32,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     test "post save fail" do
       # skip
       assert_no_difference('Reply.count') do
-        post post_replies_url(@joes_post.id), params: { reply: { reply: nil } }
+        post post_replies_url(@joes_post.id), params: { reply: nil }
       end
       assert_equal "problem with your reply", flash[:error]
     end
