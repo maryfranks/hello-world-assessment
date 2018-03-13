@@ -25,15 +25,21 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   test "can create post" do
     # skip
     assert_difference('Post.count') do
-      post posts_url, params: { post: { text: "Good times" } }
+      post posts_url, params: { post: { text: "Good times", city: "Vancouver" } }
     end
     assert_equal "Post Created", flash[:notice]
   end
 
   test "post does not save without text" do
-    # skip
-    post posts_url, params: { post: { text: nil } }
-    assert_equal "Oops, try again - Posts must have text!", flash[:error]
+    skip
+    post posts_url, params: { post: { text: nil, city: "Vancouver" } }
+    assert_equal "Oops, try again - Posts must have text and city!", flash[:error]
+  end
+
+  test "post does not save without city" do
+    skip
+    post posts_url, params: { post: { text: "hi there", city: nil } }
+    assert_equal "Oops, try again - Posts must have text and city!", flash[:error]
   end
 
 end

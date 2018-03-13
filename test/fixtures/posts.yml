@@ -7,15 +7,19 @@
 hello:
   text: "hello world"
   user: :joe
+  city: "Toronto"
 
 goodbye:
   text: "goodbye world"
   user: :joe
+  city: "Toronto"
 
 dogs:
   text: "I like dogs"
   user: :sue
+  city: "Montreal"
 
 cats:
   text: "Cats are okay"
   user: :sue
+  city: "Montreal"
