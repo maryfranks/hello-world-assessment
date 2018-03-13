@@ -8,8 +8,7 @@
     <% @posts.each do |post| %>
       <div class="post-and-replies">
         <%= link_to 'View Post', post_path(post.id) %>
-        <p> <%= post.text %> (-<%= post.user.username %>)</p>
-
+        <p> <%= post.text %> (-<%= post.user.username %>, <%= post.city %>)</p>
       <%= render 'replies/display_replies', post: post %>
     </div>
       <% end %>
