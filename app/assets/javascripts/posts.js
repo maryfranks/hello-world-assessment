@@ -13,14 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
       url: '/posts',
       method: 'post',
       data: $(post).serialize(),
-      // dataType: 'json',
     }).done(function(data) {
       console.log("done");
       var newPost = document.createElement('p');
       newPost.innerText = data;
       allPosts.append(newPost);
       postDoneButton.reset();
-      // message_button.disabled = false;
+      postDoneButton.disabled = false;
       console.log("all finished");
     });
   });

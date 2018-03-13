@@ -1,0 +1,7 @@
+<%= form_tag post_replies_path(post.id), id: 'submit-reply-form' do %>
+  <div class="reply-form">
+    <%= label_tag :reply %><br/>
+    <%= text_field_tag :reply, params[:reply] %>
+    <%= submit_tag "Reply" %>
+  </div>
+<% end %>

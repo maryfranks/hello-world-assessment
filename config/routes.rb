@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   resources :sessions, only: [:new, :create, :destroy]
-  resources :posts
+  resources :posts do
+    resources :replies, except: [:index, :new, :show]
+  end
   resource :user
 
 end
