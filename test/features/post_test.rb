@@ -48,4 +48,21 @@ feature "Post" do
     assert page.has_content? "New Post"
   end
 
+  test "submit new reply via form" do
+    visit "posts"
+    within(:xpath, ".//h2[@id='log-in']") do
+      click_link "Log in"
+    end
+    fill_in "username", :with => "imjoe"
+    fill_in "password", :with => "1234"
+    click_on "Log in"
+    visit "posts"
+    within(first(:xpath, ".//div[@class='reply-form']")) do
+      fill_in "reply", :with => "abracadabra"
+      click_on "Reply"
+    end
+    assert_equal "/posts", current_path
+    assert page.has_content? "abracadabra"
+  end
+
 end
