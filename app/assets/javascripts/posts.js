@@ -4,15 +4,16 @@
 document.addEventListener("DOMContentLoaded", function() {
   var postDoneButton = document.querySelector('#submit-post');
   var allPosts = document.querySelector('#all-posts');
-  var post = document.querySelector('#post_text')
+
 
   postDoneButton.addEventListener('submit', function(event) {
     event.preventDefault();
+    var city = document.querySelector('#post_city').value
     console.log("Submitting post");
     $.ajax({
       url: '/posts',
       method: 'post',
-      data: $(post).serialize(),
+      data: $("form").serialize(),
     }).done(function(data) {
       console.log("done");
       var newPost = document.createElement('p');
