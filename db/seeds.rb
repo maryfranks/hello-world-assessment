@@ -8,11 +8,11 @@ Reply.delete_all
 ruby = User.create(username: "ruby", password: "1234", password_confirmation: "1234")
 jason = User.create(username: "jason", password: "1234", password_confirmation: "1234")
 
-Post.create(user_id: ruby.id, text: "I can call you Betty, and Betty when you call me, you can call me Al")
-Post.create(user_id: jason.id, text: "Wake me up before you go go, take me dancing tonight")
+Post.create(user_id: ruby.id, text: "I can call you Betty, and Betty when you call me, you can call me Al", city: "Toronto")
+Post.create(user_id: jason.id, text: "Wake me up before you go go, take me dancing tonight", city: "Montreal")
 
-ruby_post = Post.create(user_id: ruby.id, text: "I would walk 500 miles")
+ruby_post = Post.create(user_id: ruby.id, text: "I would walk 500 miles", city: "Toronto")
 Reply.create(user_id: jason.id, post_id: ruby_post.id, reply: "and I would walk 500 more")
 
-jason_post = Post.create(user_id: jason.id, text: "We got to install microwave ovens, custom kitchen deliveries")
+jason_post = Post.create(user_id: jason.id, text: "We got to install microwave ovens, custom kitchen deliveries", city: "Montreal")
 Reply.create(user_id: ruby.id, post_id: jason_post.id, reply: "We got to move these refrigerators, we gotta move these color TVs")
