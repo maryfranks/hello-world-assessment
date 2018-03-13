@@ -31,13 +31,13 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "post does not save without text" do
-    skip
+    # skip
     post posts_url, params: { post: { text: nil, city: "Vancouver" } }
     assert_equal "Oops, try again - Posts must have text and city!", flash[:error]
   end
 
   test "post does not save without city" do
-    skip
+    # skip
     post posts_url, params: { post: { text: "hi there", city: nil } }
     assert_equal "Oops, try again - Posts must have text and city!", flash[:error]
   end

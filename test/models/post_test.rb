@@ -27,7 +27,7 @@ describe Post do
   end
 
   test "post needs city" do
-    skip
+    # skip
     user = User.create(username: "bear", password: "1234", password_confirmation: "1234")
     post = Post.new(text: "woot", user_id: user.id)
     refute post.save
