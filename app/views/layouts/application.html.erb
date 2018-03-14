@@ -23,12 +23,5 @@
     <% end -%>
     <%= yield %>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places&language=en"></script>
-    <script type="text/javascript">
-    var input = document.getElementById('post_city');
-    var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});
-     google.maps.event.addListener(autocomplete, 'place_changed', function(){
-        var place = autocomplete.getPlace();
-     })
-    </script>
   </body>
 </html>
