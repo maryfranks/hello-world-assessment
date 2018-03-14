@@ -15,8 +15,14 @@
       <%= f.text_area :text %><br />
       <label>City</label>
       <%= f.search_field :city %>
+      <button type="button" id="city-info">Get City Info</button>
+      <div hidden>
+        <%= f.text_field :lat %>
+        <%= f.text_field :long %>
+        <%= f.text_field :weather %>
+      </div>
     </div>
     <div>
-      <input type="submit" value="Done">
+      <input id="submit-post-button" disabled="true" type="submit" value="Done">
     </div>
   <% end %>
