@@ -14,6 +14,9 @@ class PostsController < ApplicationController
     @post.text = params[:post][:text]
     @post.city = params[:post][:city]
     @post.user_id = current_user.id
+    @post.lat = params[:post][:lat]
+    @post.long = params[:post][:long]
+    @post.weather = params[:post][:weather]
     if @post.save
       redirect_to posts_path
       flash[:notice] = "Post Created"
