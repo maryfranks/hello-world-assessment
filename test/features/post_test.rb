@@ -33,7 +33,7 @@ feature "Post" do
   end
 
   test "submit new post via form" do
-    # skip
+    skip
     visit "posts"
     within(:xpath, ".//h2[@id='log-in']") do
       click_link "Log in"
@@ -43,7 +43,9 @@ feature "Post" do
     click_on "Log in"
     visit "posts"
     fill_in "post[text]", :with => "New Post"
-    click_on "Done"
+    fill_in "post[city]", :with => "Vancouver, BC, Canada"
+    click_on "Get City Info"
+    find_button(value: "Done").click
     assert_equal "/posts", current_path
     assert page.has_content? "New Post"
   end

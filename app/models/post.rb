@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
   belongs_to :user
-  has_many   :replies 
-  validates :text, presence: true
+  has_many   :replies
+  validates :text, :city, presence: true
 end
