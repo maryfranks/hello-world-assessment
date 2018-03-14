@@ -2,27 +2,26 @@
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
-      <% post.errors.full_messages.each do |msg| %>
+        <% post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>
-    <div>
-      <label>What do you have to say?</label><br />
-      <%= f.text_area :text %><br />
-      <label>City</label>
-      <%= f.search_field :city %>
-      <button type="button" id="city-info">Get City Info</button>
-      <div hidden>
-        <%= f.text_field :lat %>
-        <%= f.text_field :long %>
-        <%= f.text_field :weather %>
-      </div>
+  <div>
+    <label>What do you have to say?</label><br />
+    <%= f.text_area :text %><br />
+    <label>City</label>
+    <%= f.search_field :city %>
+    <button type="button" id="city-info">Get City Info</button>
+    <div hidden>
+      <%= f.text_field :lat %>
+      <%= f.text_field :long %>
+      <%= f.text_field :weather %>
     </div>
-    <div>
-      <input id="submit-post-button" disabled="true" type="submit" value="Done">
-    </div>
-  <% end %>
+  </div>
+  <div>
+    <input id="submit-post-button" disabled="true" type="submit" value="Done">
+  </div>
+<% end %>

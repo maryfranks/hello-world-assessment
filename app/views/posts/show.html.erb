@@ -2,4 +2,5 @@
 <div class="post-and-replies">
   <p>Posted by <%= @post.user.username %> from <%= @post.city %> (latitude: <%= @post.lat %>, longitude: <%= @post.long %>, current weather: <%= @post.weather %> &#8451;)</p>
   <p> <%= @post.text %></p>
-<%= render 'replies/display_replies', post: @post %>
+  <%= render 'replies/display_replies', post: @post %>
+</div>
