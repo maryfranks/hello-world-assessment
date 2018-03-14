@@ -43,8 +43,9 @@ feature "Post" do
     click_on "Log in"
     visit "posts"
     fill_in "post[text]", :with => "New Post"
-    fill_in "post[city]", :with => "Vancouver"
-    click_on "Done"
+    fill_in "post[city]", :with => "Vancouver, BC, Canada"
+    click_on "Get City Info"
+    find_button(value: "Done").click
     assert_equal "/posts", current_path
     assert page.has_content? "New Post"
   end
