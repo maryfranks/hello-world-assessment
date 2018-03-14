@@ -30,6 +30,13 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Post Created", flash[:notice]
   end
 
+  test "lat long and weather save" do
+    post posts_url, params: { post: { text: "I love APIs", city: "Vancouver", lat: "55555", long: "88888", weather: "9" } }
+    assert_equal "55555", Post.last.lat
+    assert_equal "88888", Post.last.long
+    assert_equal "9", Post.last.weather
+  end
+
   test "post does not save without text" do
     # skip
     post posts_url, params: { post: { text: nil, city: "Vancouver" } }
