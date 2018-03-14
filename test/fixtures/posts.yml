@@ -8,18 +8,30 @@ hello:
   text: "hello world"
   user: :joe
   city: "Toronto"
+  lat: "43.8554579"
+  long: "-79.00248100000002"
+  weather: "9"
 
 goodbye:
   text: "goodbye world"
   user: :joe
   city: "Toronto"
+  lat: "43.8554579"
+  long: "-79.00248100000002"
+  weather: "9"
 
 dogs:
   text: "I like dogs"
   user: :sue
   city: "Montreal"
+  lat: "45.7058381"
+  long: "-73.47426"
+  weather: "3"
 
 cats:
   text: "Cats are okay"
   user: :sue
   city: "Montreal"
+  lat: "45.7058381"
+  long: "-73.47426"
+  weather: "3"
