@@ -1,23 +1,22 @@
 <h1>Hello World!</h1>
 
 <% if current_user %>
-<h3>How are you today <%= current_user.username %>?</h3>
+  <h3>How are you today <%= current_user.username %>?</h3>
   <%= render 'new_post_form', post: @post %>
-
   <div id="all-posts">
     <% @posts.each do |post| %>
       <div class="post-and-replies">
         <p>Posted by <%= post.user.username %> from <%= post.city %> (latitude: <%= post.lat %>, longitude: <%= post.long %>, current weather: <%= post.weather %> &#8451;)</p>
         <p> <%= post.text %> <%= link_to 'View Post', post_path(post.id) %></p>
-      <%= render 'replies/display_replies', post: post %>
-    </div>
+        <%= render 'replies/display_replies', post: post %>
+      </div>
       <% end %>
   </div>
 
 <% else %>
-    <div>
-      <h2 id="log-in"><%= link_to 'Log in', new_session_path %></h2>
-      <h2 id="sign-up">Or <%= link_to 'Sign Up', new_user_path %></h2>
-    </div>
+  <div>
+    <h2 id="log-in"><%= link_to 'Log in', new_session_path %></h2>
+    <h2 id="sign-up">Or <%= link_to 'Sign Up', new_user_path %></h2>
+  </div>
 
 <% end %>

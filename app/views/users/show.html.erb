@@ -1,8 +1,11 @@
 <h1>Welcome <%= current_user.username %></h1>
+
 <%= render 'posts/new_post_form', post: @post %>
+
 <% @posts.each do | post | %>
-<div class="post-and-replies">
-  <p>Posted by <%= post.user.username %> from <%= post.city %> (latitude: <%= post.lat %>, longitude: <%= post.long %>, current weather: <%= post.weather %> &#8451;)</p>
-  <p> <%= post.text %> <%= link_to 'View Post', post_path(post.id) %></p>
-<%= render 'replies/display_replies', post: post %>
+  <div class="post-and-replies">
+    <p>Posted by <%= post.user.username %> from <%= post.city %> (latitude: <%= post.lat %>, longitude: <%= post.long %>, current weather: <%= post.weather %> &#8451;)</p>
+    <p> <%= post.text %> <%= link_to 'View Post', post_path(post.id) %></p>
+    <%= render 'replies/display_replies', post: post %>
+  </div>
 <% end %>
