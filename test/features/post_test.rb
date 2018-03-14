@@ -33,7 +33,7 @@ feature "Post" do
   end
 
   test "submit new post via form" do
-    # skip
+    skip
     visit "posts"
     within(:xpath, ".//h2[@id='log-in']") do
       click_link "Log in"
