@@ -1,3 +1,23 @@
-/* // Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/ */
+/* styles for sessions found here */
+.main-log-in {
+  border: 1px solid #6B7F82;
+  background-color: #5F4654;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 14px 0px #A5A39F, 0 6px 20px 0 #DEDDDC;
+}
+
+.main-log-in p {
+  color: #DEDDDC;
+  font-size: 16pt;
+  margin-left: 25px;
+}
+
+.user-form-button {
+    margin-left: 25px;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
