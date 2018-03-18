@@ -1,3 +1,52 @@
+html {
+  font-family: 'Crimson Text', serif;
+  font-size: 14pt;
+  background-color: #DEDDDC;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40pt;
+  color: #5F4654;
+  margin-left: 20px;
+}
+
 .post-and-replies {
   border: 1px solid lightgrey;
+}
+
+.sign-in {
+  border: 1px solid #6B7F82;
+  background-color: #5F4654;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 14px 0px #A5A39F, 0 6px 20px 0 #DEDDDC;
+}
+
+.sign-in p {
+  color: #DEDDDC;
+  font-size: 16pt;
+  text-align: center;
+}
+
+#log-in a, #sign-up a {
+  font-size: 25pt;
+  color: #DEDDDC;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+#log-in {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #3C2518;
+  width: 140px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 2px 4px 14px 0px #3C2518, 0 6px 20px 0 #5F4C42;
 }

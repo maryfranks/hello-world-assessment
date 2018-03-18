@@ -14,9 +14,14 @@
   </div>
 
 <% else %>
-  <div>
-    <h2 id="log-in"><%= link_to 'Log in', new_session_path %></h2>
-    <h2 id="sign-up">Or <%= link_to 'Sign Up', new_user_path %></h2>
+  <div class="sign-in">
+    <div class="login-button">
+      <h2 id="log-in"><%= link_to 'Log in', new_session_path %></h2>
+    </div>
+    <p>or</p>
+    <div class="login-button">
+      <h2 id="sign-up"><%= link_to 'Sign Up', new_user_path %></h2>
+    </div>
   </div>
 
 <% end %>
