@@ -21,3 +21,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.wrong-place {
+  padding-top: 20px;
+  margin-left: 20px;
+  font-size: 16pt;
+}
