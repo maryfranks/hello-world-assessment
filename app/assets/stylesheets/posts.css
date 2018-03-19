@@ -11,6 +11,73 @@ h1 {
   margin-left: 20px;
 }
 
+.greeting{
+  text-align: center;
+  font-size: 18pt;
+}
+
+.new_post {
+  padding: 10px;
+}
+
+.add-post {
+  margin: auto;
+  width: 80%;
+}
+
+.add-post p {
+  line-height: 1;
+}
+
+#post_text {
+  width: 100%;
+}
+
+.submit-the-post {
+  margin: auto;
+  width: 20px;
+  padding-top: 15px;
+}
+
+#all-posts {
+  /* border: 5px solid orange; */
+}
+
 .post-and-replies {
-  border: 1px solid lightgrey;
+  border: 2px solid #6B7F82;
+  width: 90%;
+  margin: auto;
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+
+.post-and-replies p {
+  margin-left: 15px;
+}
+
+.post-text {
+  padding: 20px;
+  font-size: 16pt;
+}
+
+.replies {
+  /* border: 2px solid green; */
+  border-left: 4px solid #5F4654;
+  background-color: #8EB8E5;
+  margin-left: 40px;
+  margin-right: 5px;
+  padding-bottom: 15px;
+}
+.all-replies {
+  border-bottom: 1px solid #5F4654;
+}
+.all-replies p {
+  font-size: 16pt;
+  padding-top: 10px;
+
+}
+
+.reply-form {
+    padding-top: 10px;
+  margin-left: 15px;
 }

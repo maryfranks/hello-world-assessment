@@ -9,9 +9,9 @@
       </ul>
     </div>
   <% end %>
-  <div>
-    <label>What do you have to say?</label><br />
-    <%= f.text_area :text %><br />
+  <div class="add-post">
+    <p><label>What do you have to say?</label></p>
+    <p><%= f.text_area :text %></p>
     <label>City</label>
     <%= f.search_field :city %>
     <button type="button" id="city-info">Get City Info</button>
@@ -22,6 +22,6 @@
     </div>
   </div>
   <div>
-    <input id="submit-post-button" disabled="true" type="submit" value="Done">
+    <div class="submit-the-post"><input id="submit-post-button" disabled="true" type="submit" value="Done"></div>
   </div>
 <% end %>
