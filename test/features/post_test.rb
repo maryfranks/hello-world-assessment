@@ -32,24 +32,6 @@ feature "Post" do
     assert_equal new_session_path, current_path
   end
 
-  test "submit new post via form" do
-    skip
-    visit "posts"
-    within(:xpath, ".//h2[@id='log-in']") do
-      click_link "Log in"
-    end
-    fill_in "username", :with => "imjoe"
-    fill_in "password", :with => "1234"
-    click_on "Log in"
-    visit "posts"
-    fill_in "post[text]", :with => "New Post"
-    fill_in "post[city]", :with => "Vancouver, BC, Canada"
-    click_on "Get City Info"
-    find_button(value: "Done").click
-    assert_equal "/posts", current_path
-    assert page.has_content? "New Post"
-  end
-
   test "submit new reply via form" do
     visit "posts"
     within(:xpath, ".//h2[@id='log-in']") do

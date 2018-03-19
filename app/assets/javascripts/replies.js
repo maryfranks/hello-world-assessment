@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  if (document.querySelector('#submit-reply-form')) {
+  if (document.querySelector('.reply-form')) {
 
     var submitReplyButton = document.querySelector('#submit-reply-form');
     var allReplies = document.querySelector('.replies');
@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         method: 'post',
         data: $(reply).serialize(),
       }).done(function(data) {
+        window.google = {}
         console.log("done");
         var newReply = document.createElement('p');
         newReply.innerText = data;
@@ -24,6 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("all finished");
       });
     });
-    
+
   }
 });
