@@ -27,3 +27,40 @@
   margin-left: 20px;
   font-size: 16pt;
 }
+
+
+.sign-in {
+  border: 1px solid #6B7F82;
+  background-color: #5F4654;
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 4px 14px 0px #A5A39F, 0 6px 20px 0 #DEDDDC;
+}
+
+.sign-in p {
+  color: #DEDDDC;
+  font-size: 16pt;
+  text-align: center;
+}
+
+#log-in a, #sign-up a {
+  font-size: 25pt;
+  color: #DEDDDC;
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+#log-in {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #3C2518;
+  width: 140px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 2px 4px 14px 0px #3C2518, 0 6px 20px 0 #5F4C42;
+}
