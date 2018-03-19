@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         method: 'post',
         data: $("form").serialize(),
       }).done(function(data) {
+        window.google = {}
         console.log("done");
         var newPost = document.createElement('p');
         newPost.innerText = data;
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         method: 'get',
         dataType: 'json'
       }).done(function(data) {
+        window.google = {}
         console.log("I got the data!");
         latitude.value = data.results[0].geometry.bounds.northeast.lat;
         longitude.value = data.results[0].geometry.bounds.northeast.lng;
