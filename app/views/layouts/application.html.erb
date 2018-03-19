@@ -2,26 +2,34 @@
 <html>
   <head>
     <title>LoyaltyoneHelloWorld</title>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:600" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header>
-    <% if current_user %>
-      <%= link_to "Logout", session_path(current_user), method: :delete %>
-      <%= link_to "My posts", user_path %>
-      <%= link_to "all posts", posts_path %>
-    <% else %>
-      <%= link_to "Login", new_session_path %> | <%= link_to 'Sign Up', new_user_path %>
-    <% end %>
-
+    <div class="clear">
+    <div class="navigation">
+      <% if current_user %>
+        <%= link_to "Logout", session_path(current_user), method: :delete %>
+        <%= link_to "My Posts", user_path %>
+        <%= link_to "All Posts", posts_path %>
+      <% else %>
+        <%= link_to "Login", new_session_path %> | <%= link_to 'Sign Up', new_user_path %>
+      <% end %>
+    </div>
+  </div>
   </header>
   <body>
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
     <%= yield %>
+    <footer>
+      <p>Website retro 90s style by Mary Franks!</p>
+    </footer>
     <script src="https://maps.googleapis.com/maps/api/js?&libraries=places&language=en"></script>
   </body>
 </html>

@@ -13,3 +13,42 @@
  *= require_tree .
  *= require_self
  */
+/*
+application fonts
+================== */
+ /* font-family: 'Montserrat', sans-serif; */
+ /* font-family: 'Crimson Text', serif; */
+
+
+/* applicaiton colors
+================== */
+ /* jordy blue #8EB8E5
+ eggplant #5F4654
+ aurometalsaurus #6B7F82
+ quick silver #A5A39F
+ bistre #3C2518
+ gaiinsboro #DEDDDC*/
+
+.clear {
+    overflow: hidden;
+}
+
+.navigation {
+  background-color: #6B7F82;
+  padding: 10px;
+  color: #5F4654;
+  float: right;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.navigation a {
+  text-decoration: none;
+  text-align: right;
+  color: #DEDDDC;
+  margin: 10px;
+}
+
+footer p {
+  text-align: center;
+}
