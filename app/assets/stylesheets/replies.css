@@ -1,1 +1,19 @@
+.replies {
+  border-left: 4px solid #5F4654;
+  background-color: #8EB8E5;
+  margin-left: 40px;
+  margin-right: 5px;
+  padding-bottom: 15px;
+}
+.all-replies {
+  border-bottom: 1px solid #5F4654;
+}
+.all-replies p {
+  font-size: 16pt;
+  padding-top: 10px;
+}
 
+.reply-form {
+    padding-top: 10px;
+  margin-left: 15px;
+}
