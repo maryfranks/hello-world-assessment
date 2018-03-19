@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  if (document.querySelector('#submit-post')) {
+  if (document.querySelector('.new_post')) {
 
     var input = document.getElementById('post_city');
     var autocomplete = new google.maps.places.Autocomplete(input,{types: ['(cities)']});

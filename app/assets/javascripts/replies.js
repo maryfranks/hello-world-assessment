@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  if (document.querySelector('#submit-reply-form')) {
+  if (document.querySelector('.reply-form')) {
 
     var submitReplyButton = document.querySelector('#submit-reply-form');
     var allReplies = document.querySelector('.replies');
